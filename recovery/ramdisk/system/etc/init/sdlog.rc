@@ -1,0 +1,19 @@
+service sdlog /system/bin/sdlog
+    class late_start
+    group everybody
+    capabilities DAC_READ_SEARCH DAC_OVERRIDE
+    user root
+    disabled
+    oneshot
+
+on property:sys.logd_t2.enable=1
+    start sdlog
+
+on property:sys.logd.enable=1
+    start sdlog
+
+on property:persist.service.logd.enable=1
+    start sdlog
+
+on property:persist.service.logd.enable=0
+    stop sdlog
