@@ -1,0 +1,20 @@
+<!--
+    Input:
+        device_compatibility_matrix.default.xml
+-->
+<compatibility-matrix version="2.0" type="device">
+    <hal format="hidl" optional="false">
+        <name>android.hidl.manager</name>
+        <version>1.0</version>
+        <interface>
+            <name>IServiceManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <vendor-ndk>
+        <version>30</version>
+    </vendor-ndk>
+    <system-sdk>
+        <version>28</version>
+    </system-sdk>
+</compatibility-matrix>
